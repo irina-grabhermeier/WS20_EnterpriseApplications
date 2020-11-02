@@ -1,6 +1,5 @@
 package at.fhv.igr.server;
 
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
