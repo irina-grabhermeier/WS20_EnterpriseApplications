@@ -1,14 +1,15 @@
 package at.fhv.igr.server;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class ATMImpl implements IATMImpl {
+public class ATMImpl extends UnicastRemoteObject implements IATMImpl {
 
     private static List<Account> accounts;
 
-    public ATMImpl(List<Account> accounts) {
+    protected ATMImpl(List<Account> accounts) throws RemoteException {
         ATMImpl.accounts = accounts;
     }
 

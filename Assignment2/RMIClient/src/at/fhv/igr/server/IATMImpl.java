@@ -1,9 +1,12 @@
 package at.fhv.igr.server;
 
-public interface IATMImpl {
-    void deposit(int accountNo, float amount);
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
-    void withdraw(int accountNo, float amount);
+public interface IATMImpl extends Remote {
+    void deposit(int accountNo, float amount) throws RemoteException;
 
-    float getBalance(int accountNo);
+    void withdraw(int accountNo, float amount) throws RemoteException;
+
+    float getBalance(int accountNo) throws RemoteException;
 }
