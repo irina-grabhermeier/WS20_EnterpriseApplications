@@ -5,8 +5,8 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class SquareCalculator extends UnicastRemoteObject implements ICalc {
 
-    protected SquareCalculator() throws RemoteException {
-
+    public SquareCalculator() throws RemoteException {
+        super();
     }
 
     @Override
